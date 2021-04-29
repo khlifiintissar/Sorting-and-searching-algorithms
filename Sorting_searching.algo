@@ -1,0 +1,15 @@
+Sorting_searching.algo
+PROCEDURE insertion_sort(VAR T : ARRAY_OF INTEGER)
+VAR
+    i,j,tmp : INTEGER;
+BEGIN
+    FOR i FROM 1 TO length(T)-1 DO
+        tmp := T[i];
+        j := i-1;
+        WHILE (j > 0 AND T[j-1] > tmp) DO
+            T[j] := T[j-1];
+            j := j-1;
+        END_WHILE
+        T[j] = tmp;
+    END_FOR
+END
